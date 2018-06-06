@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+#          uri: file://${HOME}/config-repo
+          uri: https://github.com/quangyen/spring-cloud-config-file.git
+#          searchPaths: config
+          clone-on-start: true
+        bootstrap: true
